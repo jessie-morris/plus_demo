@@ -1,0 +1,59 @@
+<html>
+
+<body>
+    <title>Saftey First!</title>
+    <div id="container"></div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script>
+    <script>
+        var canvas = Raphael("container", 1000, 1000);
+
+        boxWidth = 30
+        boxHeight = 50
+
+        rects = []
+        for (var row = 0; row < 4; row++) {
+            for (var col = 0; col < 6; col++) {
+                rects.push(canvas.rect(300 + (boxWidth * col), 0 + (boxHeight * row), boxWidth, boxHeight)
+                    .attr({ fill: 'white' }))
+            }
+        }
+
+        for (var row = 0; row < 2; row++) {
+            for (var col = 0; col < 24; col++) {
+                rects.push(canvas.rect(30 + (boxWidth * col), 200 + (row * boxHeight), boxWidth, boxHeight)
+                    .attr({ fill: 'white' }))
+            }
+        }
+        for (var row = 0; row < 3; row++) {
+            for (var col = 0; col < 6; col++) {
+                rects.push(canvas.rect(300 + (boxWidth * col), 300 + (row * boxHeight), boxWidth, boxHeight)
+                    .attr({ fill: 'white' }))
+            }
+        }
+        for (var col = 0; col < 3; col++) {
+            rects.push(canvas.rect(300 + (boxWidth * 2 * col), 450, boxWidth * 2, boxHeight)
+                .attr({ fill: 'white' }))
+        }
+
+        console.log(rects)
+
+        rects.forEach(rect => {
+            rect.click(function () {
+                if (this.attr('fill') == 'white') {
+                    return this.attr('fill', 'green')
+                }
+                else if (this.attr('fill') == 'green') {
+                    return this.attr('fill', 'yellow')
+                }
+                else if (this.attr('fill') == 'yellow') {
+                    return this.attr('fill', 'red')
+                }
+                else {
+                    return this.attr('fill', 'white')
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
