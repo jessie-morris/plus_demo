@@ -1,0 +1,28 @@
+<html>
+    <head> <title>Saftey First!</title>
+        <style>
+            .row { margin: 8px; }
+            .textbox { font-size: 16px; padding: 8px; width: 80%; }
+        </style>
+    </head>
+<body>
+    <script>
+        function addRow() {
+            var issueList = document.getElementsByClassName("issue_list")[0]
+            var newInputBox = document.getElementsByClassName("row")[0].cloneNode(true)
+            issueList.appendChild(newInputBox)
+        }
+    </script>
+   
+    <h1>Today's Issues</h1>
+
+    <div class="issue_list">
+        <div class="row"><input class="textbox" type="text" placeholder="Describe issue here"></input></div>
+    </div>
+
+    <br/><br/>
+    <button onclick="addRow()">Add row</button>
+
+</body>
+
+</html>
