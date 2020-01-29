@@ -46,10 +46,10 @@
         for (var col = 1; col <= 3; col++) {
             rects.push(canvas.rect(270 + (boxWidth * 2 * col), 450, boxWidth * 2, boxHeight)
                 .attr({ fill: 'white' }))
-                if (col % 3 == 0) {
-                    canvas.text(300 + (boxWidth * 2 * col) + 25, 450 + 45, counter)
-                    counter++;
-                }
+            if (col % 3 == 0) {
+                canvas.text(300 + (boxWidth * 2 * col) + 25, 450 + 45, counter)
+                counter++;
+            }
         }
 
         console.log(rects)
@@ -57,20 +57,44 @@
         rects.forEach(rect => {
             rect.click(function () {
                 if (this.attr('fill') == 'white') {
-                    return this.attr('fill', 'green')
+                    this.attr('fill', 'green')
                 }
                 else if (this.attr('fill') == 'green') {
-                    return this.attr('fill', 'yellow')
+                    this.attr('fill', 'yellow')
                 }
                 else if (this.attr('fill') == 'yellow') {
-                    return this.attr('fill', 'red')
+                    this.attr('fill', 'red')
                 }
                 else {
-                    return this.attr('fill', 'white')
+                    this.attr('fill', 'white')
                 }
+                calculateGreenPercent(rects)
             })
         });
+
+        function calculateGreenPercent(rects) {
+            map = rects.reduce(function (acc, rect) {
+                if (rect.attr('fill') == 'green') {
+                    acc.totalPopulated++;
+                    acc.green++;
+                }
+                else if (rect.attr('fill') != "white") {
+                    acc.totalPopulated++;
+                }
+                return acc;
+            }, { "totalPopulated": 0, "green": 0 });
+
+            totalDiv = document.getElementById("greenPercent").textContent = 
+                `Green Shifts: ${(map.green * 100 / map.totalPopulated).toFixed(2)}%`
+
+            console.log(map)
+        }
     </script>
+
+    <div id="greenPercent" style="position: absolute; top: 600px; left: 50px;"> </div>
+
+    <textarea rows="1" cols="50" style="position: absolute; top: 640px; left: 50px;"></textarea>
+    <input type="text" id="textbox1" style="position: absolute; top: 670px; left: 50px; width: 320px;">
 </body>
 
 </html>
