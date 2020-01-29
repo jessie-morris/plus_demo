@@ -18,6 +18,13 @@
             newRow.appendChild(newInputBox)
             issueList.appendChild(newRow)
         }
+        function deleteRow() {
+            var rows = document.getElementsByClassName("row")
+            var lastRow = rows[rows.length - 1]
+            if (rows.length > 1) {
+                lastRow.remove()
+            }
+        }
     </script>
    
     <h1>Today's Issues</h1>
@@ -28,6 +35,7 @@
 
     <br/><br/>
     <button onclick="addRow()">Add row</button>
+    <button onclick="deleteRow()">Delete row</button>
 
 </body>
 
