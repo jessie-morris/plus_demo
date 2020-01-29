@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="tabHandler.js"></script>
+		<script>
+			function addRow() {
+				var issueList = document.getElementsByClassName("issue_list")[0]
+				var newRow = document.createElement("div")
+				newRow.setAttribute("class", "row")
+				var newInputBox = document.createElement("input")
+				newInputBox.setAttribute("class", "textbox")
+				newInputBox.setAttribute("type", "text")
+				newInputBox.setAttribute("placeholder", "Describe issue here")
+				newRow.appendChild(newInputBox)
+				issueList.appendChild(newRow)
+			}
+		</script>
+		<title>Safety Score</title>
+		<link rel="stylesheet" href="plus.css">
+	</head>
+
+	<body>
+		<div class="tabs">
+			<button class="tab-link" onclick="openTab(event, 'tab1')">Safety</button>
+			<button class="tab-link" onclick="openTab(event, 'tab2')">Quality</button>
+			<button class="tab-link" onclick="openTab(event, 'tab3')">Manual Input</button>
+		</div>
+
+		<div id="tab1" class="tab-content">
+			<html>
+
+			<div id="container"></div>
+			<div id="greenPercent">Accident Free Shifts: 100%</div>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script>
+			<script src="plus.js"></script>
+		</div>
+
+
+		<div id="tab2" class="tab-content">
+			<h1>Today's Issues</h1>
+			<div class="issue_list">
+				<div class="row">
+					<input class="textbox" type="text" placeholder="Describe issue here"></input>
+				</div>
+			</div>
+			<br/><br/>
+			<button onclick="addRow()">Add row</button>
+		</div>
+
+
+		<div id="tab3" class="tab-content">
+			<p>what up dawg</p>
+		</div>
+	</body>
+</html>
+
