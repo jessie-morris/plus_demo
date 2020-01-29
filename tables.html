@@ -9,8 +9,14 @@
     <script>
         function addRow() {
             var issueList = document.getElementsByClassName("issue_list")[0]
-            var newInputBox = document.getElementsByClassName("row")[0].cloneNode(true)
-            issueList.appendChild(newInputBox)
+            var newRow = document.createElement("div")
+            newRow.setAttribute("class", "row")
+            var newInputBox = document.createElement("input")
+            newInputBox.setAttribute("class", "textbox")
+            newInputBox.setAttribute("type", "text")
+            newInputBox.setAttribute("placeholder", "Describe issue here")
+            newRow.appendChild(newInputBox)
+            issueList.appendChild(newRow)
         }
     </script>
    
