@@ -14,12 +14,11 @@
             overflow: auto;
         }
         table {
-            table-layout: "auto";
+            width: 100%;
         }
-        .green_dot {
+        .status_dot {
             height: 25px;
             width: 25px;
-            background-color: green;
             border-radius: 50%;
             padding: 2px;
             margin: 2px;
@@ -39,6 +38,7 @@
         .textbox {
             font-size: 16px;
             padding: 8px;
+            width: 100%;
         }
     </style>
 </head>
@@ -55,11 +55,15 @@
             var newRow = document.createElement("tr")
             newRow.setAttribute("class", "row")
             var rowHTML = `
-                <td><input class="textbox" type="text" placeholder="minutes"></input></td>
-                <td><input class="textbox" type="text" placeholder="Area"></input></td>
-                <td><input class="textbox" type="text"></input></td>
-                <td><input class="textbox" type="text" placeholder="Describe issue here"></input></td>
-                <td><div class="status_indicator"><div class="green_dot"></div></div></td>`
+                <tr class="row">
+                    <td><input class="textbox" type="text" placeholder="minutes"></input></td>
+                    <td><input class="textbox" type="text" placeholder="Area"></input></td>
+                    <td><input class="textbox" type="text"></input></td>
+                    <td><input class="textbox" type="text" placeholder="Describe issue here"></input></td>
+                    <td><div class="status_indicator">
+                        <div class="status_dot" onClick="changeStatusDot(this)"></div>
+                    </div></td>
+                </tr>`
             newRow.innerHTML = rowHTML
             issueList.appendChild(newRow)
         }
@@ -68,6 +72,21 @@
             var lastRow = rows[rows.length - 1]
             if (rows.length > 1) {
                 lastRow.remove()
+            }
+        }
+        function changeStatusDot(e) {
+            var currentColor = e.style.backgroundColor
+            if (currentColor == 'white') {
+                e.setAttribute('style', 'background-color: green')
+            }
+            else if (currentColor == 'green') {
+                e.setAttribute('style', 'background-color: red')
+            }
+            else if (currentColor == 'red') {
+                e.setAttribute('style', 'background-color: white')
+            }
+            else {
+                e.setAttribute('style', 'background-color: green')
             }
         }
     </script>
@@ -80,7 +99,9 @@
             <td><input class="textbox" type="text" placeholder="Area"></input></td>
             <td><input class="textbox" type="text"></input></td>
             <td><input class="textbox" type="text" placeholder="Describe issue here"></input></td>
-            <td><div class="status_indicator"><div class="green_dot"></div></div></td>
+            <td><div class="status_indicator">
+                <div class="status_dot" onClick="changeStatusDot(this)"></div>
+            </div></td>
         </tr>
     </table>
 
