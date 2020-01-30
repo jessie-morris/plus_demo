@@ -1,6 +1,8 @@
+html {
+	font-family: sans-serif;
+}
 .header {
 	display: inline-block;
-	font-family: sans-serif;
 	font-size: 24;
 }
 
@@ -37,7 +39,7 @@
 	padding: 14px 16px;
 	margin: 0;
 	color: lightgray;
-	font-size: 14;
+	font-size: 16;
 }
 
 
@@ -52,8 +54,13 @@
 }
 
 .tab-content {
-	visibility: hidden;
-	text-align: center;
+	display: none;
+	margin-left: 20px;
+}
+
+#plus-container {
+	margin-left: 60px;
+	width: 95vw;
 }
 
 .row { margin: 8px; }
