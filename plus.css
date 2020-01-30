@@ -5,3 +5,8 @@
     font-size: 36px;
     font-weight: bold;
 }
+
+#plus-container {
+    height: 500px;
+    width: 1100px;
+}
