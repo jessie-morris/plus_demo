@@ -7,19 +7,24 @@
   <g id="svg_6"/>
   <g id="svg_7"/>
   <g id="svg_8">
-   <rect fill="#000000" fill-opacity="0" height="143" id="svg_1" stroke="#000000" width="380" x="201.5" y="82.5"/>
-   <rect fill="#ff0000" height="143" id="svg_2" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" width="144" x="57.5" y="82.5"/>
-   <rect fill="#000000" fill-opacity="0" height="143" id="svg_5" stroke="#000000" width="380" x="201.5" y="225"/>
-   <rect fill="#00bf5f" height="143" id="svg_4" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" width="144" x="57.5" y="225"/>
+   <rect fill="#000000" fill-opacity="0" height="161.031526" id="svg_1" stroke="#000000" width="451.068677" x="181.431308" y="45.499995"/>
+   <rect fill="#ff0000" height="161.031526" id="svg_2" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" width="170.931288" x="10.50002" y="45.499995"/>
+   <rect fill="#000000" fill-opacity="0" height="161.031526" id="svg_5" stroke="#000000" width="451.068677" x="181.431308" y="205.968474"/>
+   <rect fill="#00bf5f" height="161.031526" id="svg_4" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" width="170.931288" x="10.50002" y="205.968474"/>
   </g>
  </g>
- <g class="layer">
+ <g class="layer" display="inline">
   <title>Layer 2</title>
   <text fill="#000000" font-family="serif" font-size="0.5" id="svg_11" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" x="332.5" xml:space="preserve" y="59.5">9</text>
   <g id="svg_15">
-   <text fill="#000000" font-family="serif" font-size="0.5" id="svg_12" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(43.82 0 0 49.5775 -25884.7 -11028.9)" x="599.576185" xml:space="preserve" y="225.316291">Shifts in which any accident occurs</text>
-   <text fill="#000000" font-family="serif" font-size="0.5" id="svg_14" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(43.82 0 0 49.5775 -25931.7 -10890.6)" x="600.673082" xml:space="preserve" y="223.218565">(LTC, RWC, MTC or FAC)</text>
+   <title>asfafs</title>
+   <text fill="#000000" font-family="Sans-serif" font-size="0.5" id="svg_14" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(75.3245 0 0 77.3102 -44856.4 -17073.2)" x="600.939087" xml:space="preserve" y="223.259439">(LTC, RWC, MTC or FAC)</text>
+   <text fill="#000000" font-family="Sans-serif" font-size="0.5" id="svg_17" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(872.111 0 0 43.1053 -165013 -821.263)" x="189.566505" xml:space="preserve" y="27.31685"/>
   </g>
-  <text fill="#000000" font-family="serif" font-size="0.5" id="svg_16" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(43.82 0 0 49.5775 -25931.7 -10890.6)" x="600.648753" xml:space="preserve" y="225.73028">Accident free shifts</text>
+  <text fill="#000000" font-family="Sans-serif" font-size="0.5" id="svg_16" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" style="cursor: move;" text-anchor="middle" transform="matrix(80.4705 0 0 86.7699 -47921.3 -19271.7)" x="600.586618" xml:space="preserve" y="225.557409">Accident free shifts</text>
+  <text fill="#000000" font-family="Sans-serif" font-size="0.5" id="svg_10" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(687.222 0 0 72.9085 -371686 -6131.41)" x="541.5" xml:space="preserve" y="84.5"/>
+  <text fill="#000000" font-family="Sans-serif" font-size="0.5" id="svg_13" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(217.889 0 0 91.9474 -35430.8 -7332.63)" x="163.5" xml:space="preserve" y="80.5"/>
+  <text fill="#000000" font-family="Sans-serif" font-size="0.5" id="svg_18" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(87.3121 0 0 86.9177 -17129.3 -38431.1)" x="200.762256" xml:space="preserve" y="443.243165">Shifts in which any</text>
+  <text fill="#000000" font-family="Sans-serif" font-size="0.5" id="svg_19" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(86.377 0 0 83.0526 -29939.2 -12355.9)" x="351.171475" xml:space="preserve" y="150.451838">accident occurs</text>
  </g>
 </svg>
