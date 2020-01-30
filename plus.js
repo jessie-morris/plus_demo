@@ -58,9 +58,6 @@ rects.forEach(rect => {
             this.attr('fill', 'green')
         }
         else if (this.attr('fill') == 'green') {
-            this.attr('fill', 'yellow')
-        }
-        else if (this.attr('fill') == 'yellow') {
             this.attr('fill', 'red')
         }
         else {
