@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>Main Problems From Yesterday</title>
+    <style>
+        th {
+            border: 2px solid gray;
+        }
+        td {
+            border: 1px solid gray;
+        }
+        .status_indicator {
+            display: block;
+            overflow: auto;
+        }
+        table {
+            table-layout: "auto";
+        }
+        .green_dot {
+            height: 25px;
+            width: 25px;
+            background-color: green;
+            border-radius: 50%;
+            padding: 2px;
+            margin: 2px;
+        }
+        h1 {
+            background-color: gray;
+            color: white;
+            text-align: center;
+        }
+        .row {
+            margin: 8px;
+        }
+        .issue_list {
+            margin: 8px;
+            width: 100%;
+        }
+        .textbox {
+            font-size: 16px;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function setAttributes(el, attrs) {
+            for (var key in attrs) {
+                el.setAttribute(key, attrs[key]);
+            }
+        }
+        function addRow() {
+            var issueList = document.getElementsByTagName("table")[0]
+            var newRow = document.createElement("tr")
+            newRow.setAttribute("class", "row")
+            var rowHTML = `
+                <td><input class="textbox" type="text" placeholder="minutes"></input></td>
+                <td><input class="textbox" type="text" placeholder="Area"></input></td>
+                <td><input class="textbox" type="text"></input></td>
+                <td><input class="textbox" type="text" placeholder="Describe issue here"></input></td>
+                <td><div class="status_indicator"><div class="green_dot"></div></div></td>`
+            newRow.innerHTML = rowHTML
+            issueList.appendChild(newRow)
+        }
+        function deleteRow() {
+            var rows = document.getElementsByClassName("row")
+            var lastRow = rows[rows.length - 1]
+            if (rows.length > 1) {
+                lastRow.remove()
+            }
+        }
+    </script>
+
+    <h1>Main Problems From Yesterday</h1>
+    <table>
+        <thead><th>Impact (min)</th><th>Area</th><th class="turns_header">Shifts</th><th colspan="2">Description</th></thead>
+        <tr class="row">
+            <td><input class="textbox" type="text" placeholder="minutes"></input></td>
+            <td><input class="textbox" type="text" placeholder="Area"></input></td>
+            <td><input class="textbox" type="text"></input></td>
+            <td><input class="textbox" type="text" placeholder="Describe issue here"></input></td>
+            <td><div class="status_indicator"><div class="green_dot"></div></div></td>
+        </tr>
+    </table>
+
+    <br /><br />
+    <button onclick="addRow()">Add row</button>
+    <button onclick="deleteRow()">Delete row</button>
+
+</body>
+
+</html>
