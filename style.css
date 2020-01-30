@@ -1,30 +1,61 @@
+.header {
+	display: inline-block;
+	font-family: sans-serif;
+	font-size: 24;
+}
+
+.title-strip {
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 10px;
+	width: 100vw;
+}
+
+#logo {
+	float: left;
+	width: 16rem;
+	height: 3.5rem;
+	padding: 12px;
+	margin-top: 15px;
+}
+
 .tabs {
 	display: inline-block;
-	border: 1px solid black;
-	background-color: gray;
+	background-color: #424242;
+	margin: 0;
+	width: 100vw;
+	margin-right: 100px;
+	margin-bottom: 10px;
 }
 
 .tabs button {
+	display: inline-block;
 	background-color: inherit;
 	border: none;
 	outline: none;
 	cursor: pointer;
 	padding: 14px 16px;
 	margin: 0;
+	color: lightgray;
+	font-size: 14;
 }
 
 
 .tabs button:hover {
 	background-color: darkgray;
+	color: black;
 }
 
 .tabs button.active {
-	background-color: lightgray;
+	background-color: #D10000;
+	color: lightgray;
 }
 
 .tab-content {
-	display: none;
+	visibility: hidden;
+	text-align: center;
 }
 
 .row { margin: 8px; }
 .textbox { font-size: 16px; padding: 8px; width: 80%; })
+
