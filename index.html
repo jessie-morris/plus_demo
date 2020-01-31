@@ -34,14 +34,14 @@
         }
         function changeStatusDot(e) {
             var currentColor = e.style.backgroundColor
-            if (currentColor == 'white') {
+            if (currentColor == 'gray') {
                 e.setAttribute('style', 'background-color: green')
             }
             else if (currentColor == 'green') {
                 e.setAttribute('style', 'background-color: red')
             }
             else if (currentColor == 'red') {
-                e.setAttribute('style', 'background-color: white')
+                e.setAttribute('style', 'background-color: gray')
             }
             else {
                 e.setAttribute('style', 'background-color: green')
@@ -84,7 +84,9 @@
 		</div>
 
 		<div id="tab3" class="tab-content">
-			<h1>Main Problems From Yesterday</h1>
+			<div id="safety-header" style="background-color: #555555;
+				font-size: 30px; font-family: Arial, Helvetica, sans-serif;
+				color: white; font-weight: bolder; text-align: center; margin: 10px 0px; width: 862px; ">Previous Day's Issues</div>
 			<table>
 				<thead><th>Impact (min)</th><th>Area</th><th class="turns_header">Shift</th><th colspan="2" class="description_box">Description</th></thead>
 				<tr class="row">
@@ -97,7 +99,7 @@
 					</div></td>
 				</tr>
 			</table>
-			
+
 			<br /><br />
 			<button onclick="addRow()">Add row</button>
 			<button onclick="deleteRow()">Delete row</button>
