@@ -3,17 +3,50 @@
 		<link rel="stylesheet" href="style.css">
 		<script type="text/javascript" src="tabHandler.js"></script>
 		<script>
-			function addRow() {
-				var issueList = document.getElementsByClassName("issue_list")[0]
-				var newRow = document.createElement("div")
-				newRow.setAttribute("class", "row")
-				var newInputBox = document.createElement("input")
-				newInputBox.setAttribute("class", "textbox")
-				newInputBox.setAttribute("type", "text")
-				newInputBox.setAttribute("placeholder", "Describe issue here")
-				newRow.appendChild(newInputBox)
-				issueList.appendChild(newRow)
-			}
+        function setAttributes(el, attrs) {
+            for (var key in attrs) {
+                el.setAttribute(key, attrs[key]);
+            }
+        }
+        function addRow() {
+            var issueList = document.getElementsByTagName("table")[0]
+            var newRow = document.createElement("tr")
+            newRow.setAttribute("class", "row")
+            var rowHTML = `
+                <tr class="row">
+                    <td><input class="textbox" type="text" placeholder="minutes"></input></td>
+                    <td><input class="textbox" type="text" placeholder="Area"></input></td>
+                    <td><input class="textbox" type="text"></input></td>
+                    <td><input class="textbox" type="text" placeholder="Describe issue here"></input></td>
+                    <td><div class="status_indicator">
+                        <div class="status_dot" onClick="changeStatusDot(this)"></div>
+                    </div></td>
+                </tr>`
+            newRow.innerHTML = rowHTML
+            issueList.appendChild(newRow)
+        }
+        function deleteRow() {
+            var rows = document.getElementsByClassName("row")
+            var lastRow = rows[rows.length - 1]
+            if (rows.length > 1) {
+                lastRow.remove()
+            }
+        }
+        function changeStatusDot(e) {
+            var currentColor = e.style.backgroundColor
+            if (currentColor == 'white') {
+                e.setAttribute('style', 'background-color: green')
+            }
+            else if (currentColor == 'green') {
+                e.setAttribute('style', 'background-color: red')
+            }
+            else if (currentColor == 'red') {
+                e.setAttribute('style', 'background-color: white')
+            }
+            else {
+                e.setAttribute('style', 'background-color: green')
+            }
+        }
 		</script>
 		<title>Digital Line Dashboard</title>
 		<link rel="stylesheet" href="plus.css">
@@ -28,7 +61,7 @@
 			<div class="tabs">
 				<button class="tab-link active" onclick="openTab(event, 'tab1')">Safety</button>
 				<button class="tab-link" onclick="openTab(event, 'tab2')">Quality</button>
-				<button class="tab-link" onclick="openTab(event, 'tab3')">Manual Input</button>
+				<button class="tab-link" onclick="openTab(event, 'tab3')">Prev. Day's Issues</button>
 			</div>
 		</div>
 
@@ -51,14 +84,23 @@
 		</div>
 
 		<div id="tab3" class="tab-content">
-			<h1>Today's Issues</h1>
-			<div class="issue_list">
-				<div class="row">
-					<input class="textbox" type="text" placeholder="Describe issue here"></input>
-				</div>
-			</div>
-			<br/><br/>
+			<h1>Main Problems From Yesterday</h1>
+			<table>
+				<thead><th>Impact (min)</th><th>Area</th><th class="turns_header">Shift</th><th colspan="2" class="description_box">Description</th></thead>
+				<tr class="row">
+					<td><input class="textbox" type="text" placeholder="minutes"></input></td>
+					<td><input class="textbox" type="text" placeholder="Area"></input></td>
+					<td><input class="textbox" type="text"></input></td>
+					<td><input class="textbox" type="text" placeholder="Describe issue here"></input></td>
+					<td><div class="status_indicator">
+						<div class="status_dot" onClick="changeStatusDot(this)"></div>
+					</div></td>
+				</tr>
+			</table>
+			
+			<br /><br />
 			<button onclick="addRow()">Add row</button>
+			<button onclick="deleteRow()">Delete row</button>
 		</div>
 
 
