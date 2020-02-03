@@ -1,0 +1,44 @@
+# Henkley Proposal
+
+## Front end components:
+
+* Safety Cross
+* Quality Q
+* Shift Results
+* Current Team
+* OEE by shift results
+* Production (Plan vs Actual cons)
+* Daily Trends (OEE, Scrap)
+* General text grid
+  * Hourly Production
+  * Top issues
+  * Actions within the Team
+  * External Support Actions
+  * Change over tracking
+  * Speed/Changover Matrix
+
+## Additional Front End Concerns
+
+* Building a landing page user experience for the ipad
+* Building a total view of the "board" for the tv
+* Ability to wipe/snapshot the board
+
+## Backend components
+
+* Web socket server for capturing and broadcasting board events
+* Ability for this data to be persisted on server outage
+* Ability to wipe/snapshot the board
+
+## Assumptions:
+
+* Handwriting functionality will be accomplished by iPad custom keyboards
+* The backend layer will need to be hosted in the cloud or on-premise
+    * Our initial reccomendation is cloud.
+* Data will not be persisted in the first phase.
+* All user input will happen on ipad devices which have a different interface than the display only board interface
+* To reduce costs this needs to be access-restricted via network rules
+* The TV display will need to be hooked up to a device with network/internet access such as a Intel NUC, chromecast, or miniture computer.
+
+
+
+   
