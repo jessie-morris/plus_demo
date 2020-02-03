@@ -58,6 +58,40 @@ html {
 	margin-left: 20px;
 }
 
-.row { margin: 8px; }
-.textbox { font-size: 16px; padding: 8px; width: 80%; })
-
+th {
+	border: 2px solid gray;
+}
+td {
+	border: 1px solid gray;
+}
+.status_indicator {
+	display: block;
+	overflow: auto;
+}
+table {
+	width: 100%;
+}
+.status_dot {
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	padding: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: gray;
+}
+.row {
+	margin: 8px;
+}
+.issue_list {
+	margin: 8px;
+	width: 100%;
+}
+.description_box {
+	width: 60%;
+}
+.textbox {
+	font-size: 16px;
+	padding: 8px;
+	width: 100%;
+}

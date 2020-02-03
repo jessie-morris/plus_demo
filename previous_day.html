@@ -21,7 +21,8 @@
             width: 25px;
             border-radius: 50%;
             padding: 2px;
-            margin: 2px;
+            margin-left: auto;
+            margin-right: auto;
         }
         h1 {
             background-color: gray;
@@ -34,6 +35,9 @@
         .issue_list {
             margin: 8px;
             width: 100%;
+        }
+        .description_box {
+            width: 60%;
         }
         .textbox {
             font-size: 16px;
@@ -93,7 +97,7 @@
 
     <h1>Main Problems From Yesterday</h1>
     <table>
-        <thead><th>Impact (min)</th><th>Area</th><th class="turns_header">Shifts</th><th colspan="2">Description</th></thead>
+        <thead><th>Impact (min)</th><th>Area</th><th class="turns_header">Shift</th><th colspan="2" class="description_box">Description</th></thead>
         <tr class="row">
             <td><input class="textbox" type="text" placeholder="minutes"></input></td>
             <td><input class="textbox" type="text" placeholder="Area"></input></td>
